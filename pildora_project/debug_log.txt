@@ -1,0 +1,386 @@
+
+--- PLAN GENERATION ---
+Script words: 154
+Event: INTRO at 0s (Text: Demostración Completa.)
+Event: LOWER_THIRD at 4s (Text: Demostración Completa.)
+Event: CHART at 16s (Text: LOS DATOS MUESTRAN UN...)
+Event: CHART at 21s (Text: EL GRÁFICO DE BARRAS...)
+Event: PIE_CHART at 30s (Text: ESTA TARTA CIRCULAR MUESTRA...)
+Event: PIE_CHART at 35s (Text: EL GRÁFICO DE TARTA...)
+Event: LIST at 40s (Text: CONTINUAMOS CON UNA LISTA...)
+Event: INFOGRAFIA at 45s (Text: 1. PLANIFICAR CON DETALLE....)
+Event: LIST at 50s (Text: ESTOS PUNTOS SON CLAVE...)
+Executing Manim for INTRO: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_INTRO_0.mov core/manim_templates/intro_scene.py IntroScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_INTRO_0.mov
+Executing Manim for LOWER_THIRD: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_LOWER_THIRD_4.mov core/manim_templates/lower_third_scene.py LowerThirdScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_LOWER_THIRD_4.mov
+Executing Manim for CHART: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_CHART_16.mov core/manim_templates/chart_scene.py BarChartScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_CHART_16.mov
+Executing Manim for CHART: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_CHART_21.mov core/manim_templates/chart_scene.py BarChartScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_CHART_21.mov
+Executing Manim for PIE_CHART: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_PIE_CHART_30.mov core/manim_templates/pie_chart_scene.py PieChartScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_PIE_CHART_30.mov
+
+--- ERROR MANIM PIE_CHART ---
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\cli\render\commands.py:125 in render                                      |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\scene\scene.py:260 in render                                              |
+|                                                                             |
+|    257         """                                                          |
+|    258         self.setup()                                                 |
+|    259         try:                                                         |
+| >  260             self.construct()                                         |
+|    261         except EndSceneEarlyException:                               |
+|    262             pass                                                     |
+|    263         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Proyectos\testing\pildora_project\core\manim_templates\pie_chart_scene.p |
+| y:39 in construct                                                           |
+|                                                                             |
+|   36             angle = portion * 360 * DEGREES                            |
+|   37                                                                        |
+|   38             # Sector                                                   |
+| > 39             sector = Sector(                                           |
+|   40                 outer_radius=2.5,                                      |
+|   41                 inner_radius=0,                                        |
+|   42                 start_angle=current_angle,                             |
+|                                                                             |
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\mobject\geometry\arc.py:1012 in __init__                                  |
+|                                                                             |
+|   1009     """                                                              |
+|   1010                                                                      |
+|   1011     def __init__(self, radius: float = 1, **kwargs: Any) -> None:    |
+| > 1012         super().__init__(inner_radius=0, outer_radius=radius, **kwar |
+|   1013                                                                      |
+|   1014                                                                      |
+|   1015 class Annulus(Circle):                                               |
++-----------------------------------------------------------------------------+
+TypeError: manim.mobject.geometry.arc.AnnularSector.__init__() got multiple 
+values for keyword argument 'outer_radius'
+
+Executing Manim for PIE_CHART: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_PIE_CHART_35.mov core/manim_templates/pie_chart_scene.py PieChartScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_PIE_CHART_35.mov
+
+--- ERROR MANIM PIE_CHART ---
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\cli\render\commands.py:125 in render                                      |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\scene\scene.py:260 in render                                              |
+|                                                                             |
+|    257         """                                                          |
+|    258         self.setup()                                                 |
+|    259         try:                                                         |
+| >  260             self.construct()                                         |
+|    261         except EndSceneEarlyException:                               |
+|    262             pass                                                     |
+|    263         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Proyectos\testing\pildora_project\core\manim_templates\pie_chart_scene.p |
+| y:39 in construct                                                           |
+|                                                                             |
+|   36             angle = portion * 360 * DEGREES                            |
+|   37                                                                        |
+|   38             # Sector                                                   |
+| > 39             sector = Sector(                                           |
+|   40                 outer_radius=2.5,                                      |
+|   41                 inner_radius=0,                                        |
+|   42                 start_angle=current_angle,                             |
+|                                                                             |
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\mobject\geometry\arc.py:1012 in __init__                                  |
+|                                                                             |
+|   1009     """                                                              |
+|   1010                                                                      |
+|   1011     def __init__(self, radius: float = 1, **kwargs: Any) -> None:    |
+| > 1012         super().__init__(inner_radius=0, outer_radius=radius, **kwar |
+|   1013                                                                      |
+|   1014                                                                      |
+|   1015 class Annulus(Circle):                                               |
++-----------------------------------------------------------------------------+
+TypeError: manim.mobject.geometry.arc.AnnularSector.__init__() got multiple 
+values for keyword argument 'outer_radius'
+
+Executing Manim for LIST: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_LIST_40.mov core/manim_templates/list_scene.py BulletListScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_LIST_40.mov
+
+--- ERROR MANIM LIST ---
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\cli\render\commands.py:125 in render                                      |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\scene\scene.py:260 in render                                              |
+|                                                                             |
+|    257         """                                                          |
+|    258         self.setup()                                                 |
+|    259         try:                                                         |
+| >  260             self.construct()                                         |
+|    261         except EndSceneEarlyException:                               |
+|    262             pass                                                     |
+|    263         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Proyectos\testing\pildora_project\core\manim_templates\list_scene.py:31  |
+| in construct                                                                |
+|                                                                             |
+|   28             line = VGroup(dot, text).arrange(RIGHT, buff=0.5)          |
+|   29             bullet_list.add(line)                                      |
+|   30                                                                        |
+| > 31         bullet_list.arrange(DOWN, buff=0.5, align_edge=LEFT)           |
+|   32         bullet_list.next_to(title, DOWN, buff=1)                       |
+|   33                                                                        |
+|   34         # 5. Animaci�n                                                 |
+|                                                                             |
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\mobject\mobject.py:2506 in arrange                                        |
+|                                                                             |
+|   2503                     self.add(x)                                      |
+|   2504         """                                                          |
+|   2505         for m1, m2 in zip(self.submobjects, self.submobjects[1:]):   |
+| > 2506             m2.next_to(m1, direction, buff, **kwargs)                |
+|   2507         if center:                                                   |
+|   2508             self.center()                                            |
+|   2509         return self                                                  |
++-----------------------------------------------------------------------------+
+TypeError: Mobject.next_to() got an unexpected keyword argument 'align_edge'
+
+Executing Manim for INFOGRAFIA: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_INFOGRAFIA_45.mov core/manim_templates/basic_scene.py InfografiaTexto
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_INFOGRAFIA_45.mov
+Executing Manim for LIST: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_LIST_50.mov core/manim_templates/list_scene.py BulletListScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_LIST_50.mov
+
+--- ERROR MANIM LIST ---
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\cli\render\commands.py:125 in render                                      |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\scene\scene.py:260 in render                                              |
+|                                                                             |
+|    257         """                                                          |
+|    258         self.setup()                                                 |
+|    259         try:                                                         |
+| >  260             self.construct()                                         |
+|    261         except EndSceneEarlyException:                               |
+|    262             pass                                                     |
+|    263         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Proyectos\testing\pildora_project\core\manim_templates\list_scene.py:31  |
+| in construct                                                                |
+|                                                                             |
+|   28             line = VGroup(dot, text).arrange(RIGHT, buff=0.5)          |
+|   29             bullet_list.add(line)                                      |
+|   30                                                                        |
+| > 31         bullet_list.arrange(DOWN, buff=0.5, align_edge=LEFT)           |
+|   32         bullet_list.next_to(title, DOWN, buff=1)                       |
+|   33                                                                        |
+|   34         # 5. Animaci�n                                                 |
+|                                                                             |
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\mobject\mobject.py:2506 in arrange                                        |
+|                                                                             |
+|   2503                     self.add(x)                                      |
+|   2504         """                                                          |
+|   2505         for m1, m2 in zip(self.submobjects, self.submobjects[1:]):   |
+| > 2506             m2.next_to(m1, direction, buff, **kwargs)                |
+|   2507         if center:                                                   |
+|   2508             self.center()                                            |
+|   2509         return self                                                  |
++-----------------------------------------------------------------------------+
+TypeError: Mobject.next_to() got an unexpected keyword argument 'align_edge'
+
+
+--- PLAN GENERATION ---
+Script words: 154
+Event: INTRO at 0s (Text: Demostración Completa.)
+Event: LOWER_THIRD at 4s (Text: Demostración Completa.)
+Event: CHART at 16s (Text: LOS DATOS MUESTRAN UN...)
+Event: CHART at 21s (Text: EL GRÁFICO DE BARRAS...)
+Event: PIE_CHART at 30s (Text: ESTA TARTA CIRCULAR MUESTRA...)
+Event: PIE_CHART at 35s (Text: EL GRÁFICO DE TARTA...)
+Event: LIST at 40s (Text: CONTINUAMOS CON UNA LISTA...)
+Event: INFOGRAFIA at 45s (Text: 1. PLANIFICAR CON DETALLE....)
+Event: LIST at 50s (Text: ESTOS PUNTOS SON CLAVE...)
+Executing Manim for INTRO: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_INTRO_0.mov core/manim_templates/intro_scene.py IntroScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_INTRO_0.mov
+Executing Manim for LOWER_THIRD: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_LOWER_THIRD_4.mov core/manim_templates/lower_third_scene.py LowerThirdScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_LOWER_THIRD_4.mov
+Executing Manim for CHART: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_CHART_16.mov core/manim_templates/chart_scene.py BarChartScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_CHART_16.mov
+Executing Manim for CHART: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_CHART_21.mov core/manim_templates/chart_scene.py BarChartScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_CHART_21.mov
+Executing Manim for PIE_CHART: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_PIE_CHART_30.mov core/manim_templates/pie_chart_scene.py PieChartScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_PIE_CHART_30.mov
+Executing Manim for PIE_CHART: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_PIE_CHART_35.mov core/manim_templates/pie_chart_scene.py PieChartScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_PIE_CHART_35.mov
+Executing Manim for LIST: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_LIST_40.mov core/manim_templates/list_scene.py BulletListScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_LIST_40.mov
+
+--- ERROR MANIM LIST ---
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\cli\render\commands.py:125 in render                                      |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\scene\scene.py:260 in render                                              |
+|                                                                             |
+|    257         """                                                          |
+|    258         self.setup()                                                 |
+|    259         try:                                                         |
+| >  260             self.construct()                                         |
+|    261         except EndSceneEarlyException:                               |
+|    262             pass                                                     |
+|    263         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Proyectos\testing\pildora_project\core\manim_templates\list_scene.py:31  |
+| in construct                                                                |
+|                                                                             |
+|   28             line = VGroup(dot, text).arrange(RIGHT, buff=0.5)          |
+|   29             bullet_list.add(line)                                      |
+|   30                                                                        |
+| > 31         bullet_list.arrange(DOWN, buff=0.5, align_edge=LEFT)           |
+|   32         bullet_list.next_to(title, DOWN, buff=1)                       |
+|   33                                                                        |
+|   34         # 5. Animaci�n                                                 |
+|                                                                             |
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\mobject\mobject.py:2506 in arrange                                        |
+|                                                                             |
+|   2503                     self.add(x)                                      |
+|   2504         """                                                          |
+|   2505         for m1, m2 in zip(self.submobjects, self.submobjects[1:]):   |
+| > 2506             m2.next_to(m1, direction, buff, **kwargs)                |
+|   2507         if center:                                                   |
+|   2508             self.center()                                            |
+|   2509         return self                                                  |
++-----------------------------------------------------------------------------+
+TypeError: Mobject.next_to() got an unexpected keyword argument 'align_edge'
+
+Executing Manim for INFOGRAFIA: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_INFOGRAFIA_45.mov core/manim_templates/basic_scene.py InfografiaTexto
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_INFOGRAFIA_45.mov
+Executing Manim for LIST: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_LIST_50.mov core/manim_templates/list_scene.py BulletListScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_LIST_50.mov
+
+--- ERROR MANIM LIST ---
++--------------------- Traceback (most recent call last) ---------------------+
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\cli\render\commands.py:125 in render                                      |
+|                                                                             |
+|   122             try:                                                      |
+|   123                 with tempconfig({}):                                  |
+|   124                     scene = SceneClass()                              |
+| > 125                     scene.render()                                    |
+|   126             except Exception:                                         |
+|   127                 error_console.print_exception()                       |
+|   128                 sys.exit(1)                                           |
+|                                                                             |
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\scene\scene.py:260 in render                                              |
+|                                                                             |
+|    257         """                                                          |
+|    258         self.setup()                                                 |
+|    259         try:                                                         |
+| >  260             self.construct()                                         |
+|    261         except EndSceneEarlyException:                               |
+|    262             pass                                                     |
+|    263         except RerunSceneException:                                  |
+|                                                                             |
+| C:\Proyectos\testing\pildora_project\core\manim_templates\list_scene.py:31  |
+| in construct                                                                |
+|                                                                             |
+|   28             line = VGroup(dot, text).arrange(RIGHT, buff=0.5)          |
+|   29             bullet_list.add(line)                                      |
+|   30                                                                        |
+| > 31         bullet_list.arrange(DOWN, buff=0.5, align_edge=LEFT)           |
+|   32         bullet_list.next_to(title, DOWN, buff=1)                       |
+|   33                                                                        |
+|   34         # 5. Animaci�n                                                 |
+|                                                                             |
+| C:\Users\MarcosRomero\AppData\Local\Packages\PythonSoftwareFoundation.Pytho |
+| n.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\mani |
+| m\mobject\mobject.py:2506 in arrange                                        |
+|                                                                             |
+|   2503                     self.add(x)                                      |
+|   2504         """                                                          |
+|   2505         for m1, m2 in zip(self.submobjects, self.submobjects[1:]):   |
+| > 2506             m2.next_to(m1, direction, buff, **kwargs)                |
+|   2507         if center:                                                   |
+|   2508             self.center()                                            |
+|   2509         return self                                                  |
++-----------------------------------------------------------------------------+
+TypeError: Mobject.next_to() got an unexpected keyword argument 'align_edge'
+
+
+--- PLAN GENERATION ---
+Script words: 149
+Event: INTRO at 0s (Text: Píldora Educativa)
+Event: LOWER_THIRD at 4s (Text: Píldora Educativa)
+Event: INFOGRAFIA at 4s (Text: "HOLA ALUMNOS, BUENOS DÍAS....)
+Executing Manim for INTRO: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_INTRO_0.mov core/manim_templates/intro_scene.py IntroScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_INTRO_0.mov
+Executing Manim for LOWER_THIRD: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_LOWER_THIRD_4.mov core/manim_templates/lower_third_scene.py LowerThirdScene
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_LOWER_THIRD_4.mov
+Executing Manim for INFOGRAFIA: C:\Users\MarcosRomero\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m manim -qm -t --output_file C:\Proyectos\testing\pildora_project\media\asset_INFOGRAFIA_4.mov core/manim_templates/basic_scene.py InfografiaTexto
+Output Expected: C:\Proyectos\testing\pildora_project\media\asset_INFOGRAFIA_4.mov

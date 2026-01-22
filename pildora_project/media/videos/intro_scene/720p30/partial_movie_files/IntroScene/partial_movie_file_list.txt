@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Proyectos/testing/pildora_project/media/videos/intro_scene/720p30/partial_movie_files/IntroScene/2426575890_1289316951_223132457.mov'
+file 'file:C:/Proyectos/testing/pildora_project/media/videos/intro_scene/720p30/partial_movie_files/IntroScene/2969992193_1608067981_1793284681.mov'
+file 'file:C:/Proyectos/testing/pildora_project/media/videos/intro_scene/720p30/partial_movie_files/IntroScene/2969992193_2872842549_2362330779.mov'
+file 'file:C:/Proyectos/testing/pildora_project/media/videos/intro_scene/720p30/partial_movie_files/IntroScene/2969992193_2796204568_1101682277.mov'

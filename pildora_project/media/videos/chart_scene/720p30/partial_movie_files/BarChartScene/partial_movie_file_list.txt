@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Proyectos/testing/pildora_project/media/videos/chart_scene/720p30/partial_movie_files/BarChartScene/2316462232_1034514456_223132457.mov'
+file 'file:C:/Proyectos/testing/pildora_project/media/videos/chart_scene/720p30/partial_movie_files/BarChartScene/1495129041_658867146_4285512549.mov'
+file 'file:C:/Proyectos/testing/pildora_project/media/videos/chart_scene/720p30/partial_movie_files/BarChartScene/1495129041_1723098723_4285512549.mov'
+file 'file:C:/Proyectos/testing/pildora_project/media/videos/chart_scene/720p30/partial_movie_files/BarChartScene/1495129041_548731573_2664068798.mov'
